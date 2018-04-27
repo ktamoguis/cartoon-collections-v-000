@@ -11,14 +11,18 @@ def summon_captain_planet(array)
   array.collect {|planet| planet.capitalize + "!"}
 end
 
-def long_planeteer_calls(array) 
+def long_planeteer_calls(array)
   i = 0
   collection = []
   while i < array.length
-    collection << array[i] > 4
+    if array[i].length > 4
+        collection << true
+    else
+        collection << false
+    end
     i += 1
   end
-  collection.include?(true)  
+  collection.include?(true)
 end
 
 def find_the_cheese# code an argument here
