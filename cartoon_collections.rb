@@ -11,11 +11,11 @@ def summon_captain_planet(array)
   array.collect {|planet| planet.capitalize + "!"}
 end
 
-def long_planeteer_calls(array) { |string| string.length > 4}
+def long_planeteer_calls(array) 
   i = 0
   collection = []
   while i < array.length
-    collection << yield(array[i])
+    collection << array[i] > 4
     i += 1
   end
   collection.include?(true)  
